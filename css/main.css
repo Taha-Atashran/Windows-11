@@ -1,0 +1,287 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font: 16px sans-serif;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.game-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+}
+.game {
+  width: 800px;
+  height: 600px;
+  background: url(../Images/background-blue.png);
+  animation: scroll-background 5s linear infinite;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+@keyframes scroll-background {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: 256px;
+  }
+}
+
+.game .enemy {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: -18px;
+  width: 55px;
+}
+
+.game .explosion {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: -18px;
+  width: 40px;
+}
+
+.game .present {
+  position: absolute;
+  margin-left: -11px;
+  width: 30px;
+}
+
+.game .player {
+  position: absolute;
+  margin-left: -20px;
+  width: 40px;
+}
+
+.game .laser {
+  position: absolute;
+  margin-left: -2.5px;
+  height: 30px;
+}
+
+.game .enemy-laser {
+  position: absolute;
+  margin-left: -2.5px;
+  height: 25px;
+  width: 25px;
+}
+
+.congratulations {
+  display: none;
+  position: absolute;
+  background: #c7a526;
+  color: white;
+  padding: 20px 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  animation: pop-in 1s;
+  left: 30%;
+  top: 20%;
+  z-index: 999;
+}
+
+#next-level img {
+  height: 150px;
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+#restart img {
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.game-over {
+  display: none;
+  position: absolute;
+  background: white;
+  color: #6b1818;
+  padding: 20px 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  animation: pop-in 1s;
+  left: 30%;
+  top: 5%;
+  z-index: 999;
+}
+.game-over img {
+  border: none;
+  height: 220px;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+}
+.btn {
+  border: 2px solid rgb(53, 53, 53);
+  color: rgb(0, 0, 0);
+  background-color: #fff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 700;
+}
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translate(0, -100px);
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(0, 30px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.game .mute {
+  height: 5px;
+  margin-left: 750px;
+  margin-top: 5px; /*without it player disappear*/
+}
+.game #mute_icon {
+  height: 5px;
+  margin-left: 750px;
+  margin-top: -5px; /*without it player disappear*/
+  display: none;
+}
+
+.game .score {
+  /* color: rgb(0, 183, 255); */
+  color: #fff;
+  width: 200px;
+  height: 5px;
+}
+.game .lives {
+  color: rgb(0, 183, 255);
+  width: 200px;
+  height: 5px;
+  margin-left: 100px;
+  margin-top: -5px;
+}
+.game .lives img,
+.game .score img {
+  margin-left: 20px;
+  margin-top: 12px;
+  margin-right: 10px;
+}
+.game .mute img,
+.game #mute_icon img,
+.game .lives img,
+.game .score img {
+  width: 25px;
+  height: 25px;
+}
+
+#lives {
+  color: red;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.modal button {
+  font: inherit;
+  background: transparent;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  display: inline-block;
+  margin: 10px;
+  background-color: orangered;
+}
+
+.modal {
+  position: fixed;
+  z-index: 200;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  width: 35%;
+  border-radius: 8px;
+  background: #f79400;
+  color: #000;
+  padding: 20px 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  animation-name: animatetop;
+  animation-duration: 0.7s;
+}
+
+.modal img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 10%;
+    opacity: 1;
+  }
+}
+.modal h1 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.modal-input {
+  margin: 0.5rem 0;
+}
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+.open {
+  display: block;
+}
+.top-img > img{
+  width: 45px !important;
+  height: 35px !important;
+  transform: translateY(5px);
+}
+.score{
+  transform: translateY(-9px) !important;
+}

@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 11</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body oncontextmenu="return false;">
+    <div id="loginpage">
+        <div class="main" >
+            <img src="./img/login/icons8-user-100.png" alt="">
+            <h1>Taha Atashran</h1>
+            <input id="pass" type="password" placeholder="Enter your password">
+            <h4>Password: 123</h4>
+        </div>
+    </div>
+    <div id="clickR">
+
+    </div>
+    <div id="desktoppage">
+        <div class="icon-parent">
+            <div class="items" ondblclick="Thispc()">
+                <img class="Thispc" src="./img/icon/icons8-this-pc-94.png">
+                <span >This Pc</span>
+            </div>
+            <div class="items"  ondblclick="openRecycleBin()">
+                <img id="recycleBinImg" src="./img/icon/icons8-recycle-bin-48 (2).png" alt="">
+                <span>Recycle Bin</span>
+            </div>
+            <div class="items" onclick="closeClick()">
+                <img src="./img/icon/icons8-vs-code-48 (1).png" alt="">
+                <span>Visual studio code</span>
+            </div>
+            <div class="items google" onclick="closeClick()">
+                <a href="https://www.google.com" target="_blank">
+                    <img src="./img/icon/icons8-chrome-48.png" alt="">
+                    <span>Google Chroom</span>    
+                </a>
+            </div>    
+            <div class="items google " ondblclick="wordd()">
+                    <img class="Firefox" src="./img/icon/icons8-word-48 (3).png" alt="">
+                    <span>Word</span>    
+            </div>
+            <div class="items google " onclick="closeClick()" ondblclick="location.href = `./gameIndex.html`">
+                    <img class="chickenImg" src="./Images/4996530-middle-removebg-preview.png" alt="">
+                    <span>Chiken Invaders</span>    
+            </div>
+            <div class="items" id="parentDelete" oncontextmenu="deleteFolderR()" style="display:none; z-index: 10;">
+                    <img src="./img/clickright/icons8-folder-48 (1).png" alt="">
+                    <span>New Folder</span>
+            </div>
+        </div>
+        <main class="all-start" onclick="ziroStart()">
+            <div id="start">
+                <div class="hedder">
+                    <div class="top">
+                        <i class="fa-solid fa-magnifying-glass search"></i>
+                        <input type="search" placeholder="Search for apps,setting and documents">
+                    </div>
+                    <div class="second">
+                        <span>Pinned</span>
+                        <span>All apps <i class="fa-solid fa-chevron-right chervon-right"></i></span>
+                    </div>
+                    <div class="third">
+                        <div class="items">
+                            <img src="./img/icon/icons8-microsoft-edge-48.png" alt="">
+                            <span>Edge</span>
+                        </div>
+                        <div class="items">
+                            <img src="./img/start/icons8-mail-48.png" alt="">
+                            <span>Mail</span>
+                        </div>
+                        <div class="items">
+                            <img src="./img/start/icons8-calendar-48.png" alt="">
+                            <span>Calendar</span>
+                        </div>
+                        <div class="items">
+                            <img src="./img/icon/icons8-microsoft-store-100.png" alt="">
+                            <span> Store</span>
+                        </div>
+                        <div class="items">
+                            <img src="./img/start/icons8-photos-48.png" alt="">
+                            <span>Photos</span>
+                        </div>
+                        <div class="items">
+                            <img src="./img/start/icons8-setting-48.png" alt="">
+                            <span>Setting</span>
+                        </div>
+                        <div class="items" onclick="calculator()">
+                            <img src="./img/start/icons8-calculator-53.png" alt="">
+                            <span>Calculator</span>
+                        </div>
+                        <div class="items">
+                            <img src="./img/start/icons8-notepad-48.png" alt="">
+                            <span>Notepad</span>
+                        </div>
+                        <div class="items">
+                            <img src="./img/start/icons8-paint-48.png" alt="">
+                            <span>Paint</span>
+                        </div>
+                        <div class="items">
+                            <img src="./img/icon/icons8-file-explorer-new-48 (1).png" alt="">
+                            <span>Explorer</span>
+                        </div>
+                        <div class="items">
+                            <img src="./img/start/icons8-clapperboard-48.png" alt="">
+                            <span>Movies</span>
+                        </div>
+                        <div class="items">
+                            <img src="./img/start/icons8-tips-100.png" alt="">
+                            <span>Tips</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="bottom">
+                    <div class="child">
+                        <div class="first">
+                            <img src="./img/icons8-user-30.png" alt="">
+                            <span>Taha Atashran</span>
+                        </div>
+                        <div class="second" onclick="Shutdown()" style="cursor:pointer;">
+                            <i id="power-click" class="fa-solid fa-power-off"></i>
+                        </div>
+                    </div>
+                    <div id="power">
+                        <div class="items">
+                            <i class="fa-solid fa-gear shutdown-icon"></i>
+                            <span>Sing-in-option</span>
+                        </div>
+                        <div class="items">
+                            <i class="fa-solid fa-moon shutdown-icon"></i>
+                            <span>Sleep</span>
+                        </div>
+                        <div class="items" onclick="off()">
+                            <i class="fa-solid fa-power-off shutdown-icon"></i>
+                            <span>Shut down</span>
+                        </div>
+                        <div class="items">
+                            <i class="fa-solid fa-rotate-left shutdown-icon"></i>
+                            <span>Restart</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <main>
+            <div id="mycomputer" class="computerParent">
+                <div class="hedder" >
+                    <div class="top" >
+                        <div class="child">
+                            <div>
+                                <img src="./img/icon/icons8-this-pc-94.png" alt="">
+                                <span>This pc</span>
+                            </div>
+                        </div>
+                        <div class="click-close" >
+                            <div class="close" onclick="closes()">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                            <div class="resize" onclick="resize()">
+                                <i class="fa-solid fa-expand"></i>
+                            </div>
+                            <div class="mine" onclick="minusThisPC()">
+                                <i class="fa-solid fa-minus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="first">
+                            <i class="fa-solid fa-chevron-left"></i>
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <i class="fa-solid fa-arrow-up"></i>
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </div>
+                        <div class="second">
+                            <input type="text" value="This pc">
+                        </div>
+                        <div class="third">
+                            <input type="text" placeholder="Search this pc">
+                        </div>
+                    </div>
+                </div>
+                <div class="footerr">
+                    <div class="left">
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-home-48.png" alt="">
+                        <span>Home</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-gallery-48.png" alt="">
+                        <span>Gallery</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-onedrive-48.png" alt="">
+                        <span>Onedrive</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-desktop-48.png" alt="">
+                        <span>Desktop</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-download-16.png" alt="">
+                        <span>Download</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-document-48.png" alt="">
+                        <span>Document</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-picture-48.png" alt="">
+                        <span>Picture</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-music-48.png" alt="">
+                        <span>Music</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-video-48.png" alt="">
+                        <span>Video</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-folder-48 (1).png" alt="">
+                        <span>img</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-folder-48 (1).png" alt="">
+                        <span>Windows11</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-folder-48 (1).png" alt="">
+                        <span>Digikala</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-folder-48 (1).png" alt="">
+                        <span>Modiseh</span>
+                       </div>
+                       <div class="items not-hover">
+                        <ul id="computer-acardion">
+                            <li>
+                                <input type="checkbox" id="second">
+                                <label for="second">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                    <img src="./img/icon/icons8-this-pc-94.png" alt="">
+                                    <span>This pc</span>
+                                </label>
+    
+                                <div class="mini-icon">
+                                    <div class="items">
+                                        <ul class="acordion-second">
+                                            <li>
+                                                <input type="checkbox" id="third">
+                                                <label for="third">
+                                                    <i class="fa-solid fa-chevron-right"></i>
+                                                    <img src="./img/icons8-c-drive-48.png" alt="">
+                                                    <span>Local drive (C:)</span>
+                                                </label>
+    
+                                                <div class="childd">
+                                                    <div class="items">
+                                                        <img src="./img/mycomputer-icon/icons8-folder-48 (1).png" alt="">
+                                                        <span>New folder (1)</span>
+                                                    </div>
+                                                    <div class="items">
+                                                        <img src="./img/mycomputer-icon/icons8-folder-48 (1).png" alt="">
+                                                        <span>New folder (2)</span>
+                                                    </div>
+                                                    <div class="items">
+                                                        <img src="./img/mycomputer-icon/icons8-folder-48 (1).png" alt="">
+                                                        <span>New folder (3)</span>
+                                                    </div>
+                                                    <div class="items">
+                                                        <img src="./img/mycomputer-icon/icons8-folder-48 (1).png" alt="">
+                                                        <span>New folder (4)</span>
+                                                    </div>
+                                                    <div class="items">
+                                                        <img src="./img/mycomputer-icon/icons8-folder-48 (1).png" alt="">
+                                                        <span>New folder (5)</span>
+                                                    </div>
+                                                    <div class="items">
+                                                        <img src="./img/mycomputer-icon/icons8-folder-48 (1).png" alt="">
+                                                        <span>New folder (6)</span>
+                                                    </div>
+    
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="items">
+                                        <img src="./img/icons8-ssd-30.png" alt="">
+                                        <span>Local disk (D:)</span>
+                                    </div>
+                                    <div class="items">
+                                        <img src="./img/icons8-ssd-30.png" alt="">
+                                        <span>Local disk (E:)</span>
+                                    </div>
+                                    <div class="items">
+                                        <img src="./img/icons8-ssd-30.png" alt="">
+                                        <span>Local disk (F:)</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-windows-client-48.png" alt="">
+                        <span>Network</span>
+                       </div>
+                    </div>
+                    <div class="right">
+                        <ul id="acordion">
+                            <li>
+                                <input type="checkbox" id="first">
+                                <label for="first"><i class="fa-solid fa-chevron-right hh"></i> Devices and drives</label>
+    
+                                <div class="content">
+                                    <div class="items">
+                                        <div class="right">
+                                            <img class="avali" src="./img/icons8-c-drive-48.png">
+                                        </div>
+                                        <div class="left">
+                                            <span class="one">Local Disk(C:)</span>
+                                            <input class="two" type="text">
+                                            <span class="three">251 GB free of 251 GB</span>
+                                        </div>
+                                    </div>
+                                    <div class="items">
+                                        <div class="right">
+                                            <img  src="./img/icons8-ssd-30.png">
+                                        </div>
+                                        <div class="left">
+                                            <span class="one">Local Disk(D:)</span>
+                                            <input class="two" type="text">
+                                            <span class="three">251 GB free of 251 GB</span>
+                                        </div>
+                                    </div>
+                                    <div class="items">
+                                        <div class="right">
+                                            <img  src="./img/icons8-ssd-30.png">
+                                        </div>
+                                        <div class="left">
+                                            <span class="one">Local Disk(E:)</span>
+                                            <input class="two" type="text">
+                                            <span class="three">251 GB free of 251 GB</span>
+                                        </div>
+                                    </div>
+                                    <div class="items">
+                                        <div class="right">
+                                            <img src="./img/icons8-ssd-30.png">
+                                        </div>
+                                        <div class="left">
+                                            <span class="one">Local Disk(F:)</span>
+                                            <input class="two" type="text">
+                                            <span class="three">251 GB free of 251 GB</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <main id="menubar">
+            <ul id="rightClick">
+                <li>view <i class="fa-solid fa-chevron-right right"></i>
+                    <ul>
+                        <li class="li">Larg icon </li>
+                        <li class="li">Medium icon </li>
+                        <li class="li">Small icon </li>
+                    </ul>
+                </li>
+                <li>Sort by  <i class="fa-solid fa-chevron-right right"></i>
+                    <ul>
+                        <li class="li">Name</li>
+                        <li class="li">Size</li>
+                        <li class="li">Item type</li>
+                        <li class="li">Date modofied</li>
+                    </ul>
+                </li>
+                <li class="border-bottom" onclick="refreshPage()">Reflesh</li>
+                <li>
+                    <span>Undo Move</span>
+                    <span class="mini">Ctrl+z</span>
+                </li>
+                <li class="border-bottom">New <i class="fa-solid fa-chevron-right right"></i>
+                    <ul>
+                        <li class="li" onclick="newFolder()">
+                            <img src="./img/clickright/icons8-folder-48 (1).png" alt="">
+                            <span>Folder</span>
+                        </li>
+                        <li class="li">
+                            <img src="./img/clickright/icons8-microsoft-excel-48.png" alt="">
+                            <span>Microsoft Excel</span>
+                        </li>
+                        <li class="li">
+                            <img src="./img/clickright/icons8-access-48.png" alt="">
+                            <span>Access</span>
+                        </li>
+                        <li class="li">
+                            <img src="./img/clickright/icons8-microsoft-powerpoint-48.png" alt="">
+                            <span>Powerpoint</span>
+                        </li>
+                        <li class="li">
+                            <img src="./img/clickright/icons8-word-48 (1).png" alt="">
+                            <span>Word</span>
+                        </li>
+                        <li class="li">
+                            <img src="./img/clickright/icons8-shortcut-48.png" alt="">
+                            <span>Shortcut</span>
+                        </li>
+                        <li class="li">
+                            <img src="./img/clickright/icons8-document-16.png" alt="">
+                            <span>Document</span>
+                        </li>
+                        <li class="li">
+                            <img src="./img/clickright/icons8-zip-60.png" alt="">
+                            <span>Zip</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>Display Setting</li>
+                <li class="border-bottom">Show more option</li>
+                <li onclick="openPer()">Personalize</li>
+                <li></li>
+            </ul>
+        </main>
+        <main class="widgets">
+            <div id="widgetsMenu">
+                <img src="./img/icon/nadombe2.png" alt="">
+                <h2>Sign in to use your widgets</h2>
+                <p class="prograph">Get quick access to the latest headline, weather updates, your to Do list, and everything else that's important to you at a glance.</p>
+                <button type="submit">Sing in</button>
+            </div>
+        </main>
+        <main>
+            <div id="machin" class="draggable" style="display:none;">
+                <div class="mark-parent">
+                    <i onclick="minusCalculator()" class="fa-solid fa-minus"></i>
+                    <i onclick="mark()" class="fa-solid fa-xmark"></i>
+                </div>
+                <div id="display"></div>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="appendToDisplay('/')">/</button>
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('*')">*</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('-')">-</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('+')">+</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button onclick="appendToDisplay('0')">0</button>
+                <button style="background-color: #70a4d3;" onclick="calculate()">=</button>
+            </div>        
+        </main>
+        <main>
+            <div id="word">
+                <div class="left">
+                    <h1>Word</h1>
+                    <span class="re">Recent</span>
+                    <span class="ol">Older</span>
+                    <div class="items">
+                        <div class="left">
+                            <img src="./img/icon/icons8-word-file-53.png" alt="">
+                        </div>
+                        <div class="right">
+                            <span class="doc">Doc1.dox</span>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="left">
+                            <img src="./img/icon/icons8-word-file-53.png" alt="">
+                        </div>
+                        <div class="right">
+                            <span class="doc">Doc2.dox</span>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="left">
+                            <img src="./img/icon/icons8-word-file-53.png" alt="">
+                        </div>
+                        <div class="right">
+                            <span class="doc">Doc3.dox</span>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="left">
+                            <img src="./img/icon/icons8-word-file-53.png" alt="">
+                        </div>
+                        <div class="right">
+                            <span class="doc">Doc4.dox</span>
+                        </div>
+                    </div>
+                    <div class="border-bottom"></div>
+                    
+                </div>
+                <div class="right">
+                    <div class="hedder" style="cursor:pointer;">
+                        <i onclick="minusWord()" class="fa-solid fa-minus"></i>
+                        <i style=" background:transparent;" onclick="size()" class="fa-solid fa-expand"></i>
+                        <i onclick="shut()" class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="second">
+                        <div class="left">
+                            <input type="text" placeholder="Search for online templates">
+                        </div>
+                        <div class="right">
+                            <span style="margin-right: 5px;">Sing in to get the most out of Office </span>
+                        </div>
+                    </div>
+                    <div class="third">
+                        <div class="items">
+                            <div onclick="newWord()" id="text">
+
+                            </div>
+                            <span style="text-align: start;">Blank document</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <main>
+            <div id="word_page">
+                <div class="hedder">
+                    <div class="first">
+                        <div class="left">
+                            <img src="./img/word/icons8-save-50.png" alt="">
+                        </div>
+                        <div class="center">
+                            <span>Document1_Word</span>
+                        </div>
+                        <div class="right">
+                            <i onclick="minusWorsPage()" class="fa-solid fa-minus"></i>
+                            <i onclick="word_close()" class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+
+                    <div class="second">
+                        <div class="left">
+                            <div class="items" id="selected" style="cursor:pointer;" onclick="selWord()">File</div>
+                            <div class="items word-sel" id="selected">Home</div>
+                            <div class="items" id="selected">Insert</div>
+                            <div class="items" id="selected">Disign</div>
+                            <div class="items" id="selected">Layout</div>
+                            <div class="items" id="selected">References</div>
+                            <div class="items" id="selected">Mailings</div>
+                            <div class="items" id="selected">Review</div>
+                            <div class="items" id="selected">View</div>
+                        </div>
+                        <div class="right">
+                            <div class="items">Sign in</div>
+                            <div class="items">Share</div>
+                        </div>
+                    </div>
+
+                    <div class="third">
+                        <div class="first">
+                            <div class="left">
+                                <div class="top">
+                                    <img src="./img/word/img/header-top/20.png" alt="">
+                                </div>
+                                <div class="bottom">Paste <i class="fa-solid fa-caret-down"></i></div>
+                            </div>
+                            <div class="right">
+                                <div class="items">
+                                    <div class="left">
+                                        <img src="./img/word/img/header-top/22.png" alt="">
+                                    </div>
+                                    <div class="right">
+                                        <span>Cut</span>
+                                    </div>
+                                </div>
+                                <div class="items">
+                                    <div class="left">
+                                        <img src="./img/word/img/header-top/23.png" alt="">
+                                    </div>
+                                    <div class="right">
+                                        <span>Copy</span>
+                                    </div>
+                                </div>
+                                <div class="items word-hover">
+                                    <div class="left">
+                                        <img src="./img/word/img/header-top/24.png" alt="">
+                                    </div>
+                                    <div class="right">
+                                        <span style="color: #000; font-size:14px;">Format Painter</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="second">
+                            <div class="top">
+                                <div>
+                                    <select name="lan" id="select-first" onchange="fontChangeStyle(this);" >
+                                        <option value="Yekan" >Select font family</option>
+                                        <option value="Yekan" >Yekan</option>
+                                        <option value="Mitra">Mitra</option>
+                                        <option value="Ramsar">Ramsar</option>
+                                        <option value="Mj Flow">Mj Flow</option>
+                                        <option value="Aban">Aban</option>
+                                        <option value="Nasim">Nasim</option>
+                                        <option value="Kokab">Kokab</option>
+                                    </select>
+                                    <select name="Size" id="select-second" onchange="fontChangeSize(this);">
+                                        <option value="2">2</option>
+                                        <option value="4">4</option>
+                                        <option value="6">6</option>
+                                        <option value="8">8</option>
+                                        <option value="10">10</option>
+                                        <option value="12">12</option>
+                                        <option value="14">14</option>
+                                        <option value="16">16</option>
+                                        <option value="20">20</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                        <option value="300">300</option>
+                                    </select>
+                                </div>
+                                    <div class="first-img">
+                                        <img src="./img/my-screen/4.png" alt="">
+                                    </div>
+                                    <div class="first-img">
+                                        <img src="./img/my-screen/5.png" alt="">
+                                    </div>
+                                    <div class="first-img">
+                                        <img src="./img/my-screen/3.png" alt="">
+                                    </div>
+                                    <div class="first-img">
+                                        <img src="./img/word/img/header-top/27.png" alt="">
+                                    </div>
+                            </div>
+                            <div class="bottom">
+                                <div class="child">
+                                    <img class="cursor" onclick="boldStyle()" src="./img/my-screen/10.png" alt="">
+                                </div>
+                                <div class="child">
+                                    <img class="cursor" onclick="orib()" src="./img/my-screen/i.png" alt="">
+                                </div>
+                                <div class="child">
+                                    <img class="cursor" onclick="underline()" src="./img/my-screen/U.png" alt="">
+                                </div>
+                                <div class="child">
+                                    <img class="cursor" onclick="throth()" src="./img/my-screen/abc.png" alt="">
+                                </div>
+                                <div class="child">
+                                    <img src="./img/my-screen/x2down.png" alt="">
+                                </div>
+                                <div class="child">
+                                    <img style="border-right: 1px solid #ccc;" src="./img/my-screen/x2up.png" alt="">
+                                </div>
+                                <div class="child">
+                                    <img class="cursor"  onclick="shadow()" src="./img/my-screen/a2.png" alt="">
+                                </div>
+                                <div class="child">
+                                    <img class="cursor" onclick="light()" src="./img/my-screen/light.png" alt="">
+                                </div>
+                                <div class="child">
+                                    <img class="cursor" style="border-right: 1px solid #ccc;" onclick="showColorPicker()" src="./img/my-screen/color.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="third">
+                            <div class="top">
+                                <div class="items">
+                                    <img src="./img/word/img/header-top/40.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img src="./img/word/img/header-top/41.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img style="border-right: 1px solid #ccc;" src="./img/word/img/header-top/42.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img src="./img/word/img/header-top/43.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img style="border-right: 1px solid #ccc;" src="./img/word/img/header-top/44.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img style="border-right: 1px solid #ccc;" src="./img/word/img/header-top/45.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img src="./img/word/img/header-top/46.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img src="./img/word/img/header-top/47.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img src="./img/word/img/header-top/48.png" alt="">
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <div class="items">
+                                    <img class="cursor" onclick="left()" src="./img/word/img/header-top/49.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img class="cursor" onclick="center()"   src="./img/word/img/header-top/50.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img class="cursor" onclick="right()"  style="border-right: 1px solid #ccc;" src="./img/word/img/header-top/51.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img src="./img/word/img/header-top/52.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img src="./img/word/img/header-top/53.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img src="./img/word/img/header-top/54.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img src="./img/word/img/header-top/55.png" alt="">
+                                </div>
+                                <div class="items"></div>
+                                <div class="items"></div>
+                            </div>
+                        </div>
+
+                        <div class="ford">
+                            <div class="child">
+                                <div class="itemss">
+                                    <img src="./img/word/img/header-top/201.png" alt="">
+                                </div>
+                                <div class="itemss">
+                                    <img src="./img/word/img/header-top/202.png" alt="">
+                                </div>
+                                <div class="itemss">
+                                    <img src="./img/word/img/header-top/203.png" alt="">
+                                </div>
+                                <div class="itemss">
+                                    <img src="./img/word/img/header-top/204.png" alt="">
+                                </div>
+                                <div class="itemss">
+                                    <img src="./img/word/img/header-top/205.png" alt="">
+                                </div>
+                                <!-- <div class="itemss">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="itemss">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="itemss">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="itemss">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="itemss">
+                                    <img src="" alt="">
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <div class="last">
+                            <div class="items">
+                                <div class="left">
+                                    <img src="./img/word/img/header-top/80.png" alt="">
+                                </div>
+                                <div class="right">
+                                    <span>Find <i class="fa-solid fa-caret-down"></i></span>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="left">
+                                    <img src="./img/word/img/header-top/81.png" alt="">
+                                </div>
+                                <div class="right">
+                                    <span>Replace</span>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="left">
+                                    <img src="./img/word/img/header-top/82.png" alt="">
+                                </div>
+                                <div class="right">
+                                    <span>Select <i class="fa-solid fa-caret-down"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-box" id="textInput">
+                        <div class="child">
+                            <textarea id="textStyle" name="text" id="" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+
+                    <div id="rightWord">
+                        <div class="left">
+                            <div class="top">
+                                <div class="items">
+                                    <select name="lan" id="select-first" onchange="fontChangeStyle(this);" >
+                                        <option value="Yekan" >Select font family</option>
+                                        <option value="Yekan" >Yekan</option>
+                                        <option value="Mitra">Mitra</option>
+                                        <option value="Ramsar">Ramsar</option>
+                                        <option value="Mj Flow">Mj Flow</option>
+                                        <option value="Aban">Aban</option>
+                                        <option value="Nasim">Nasim</option>
+                                        <option value="Kokab">Kokab</option>
+                                    </select>
+                                </div>
+                                <div class="items">
+                                    <select name="Size" id="select-second" onchange="fontChangeSize(this);">
+                                        <option value="2">2</option>
+                                        <option value="4">4</option>
+                                        <option value="6">6</option>
+                                        <option value="8">8</option>
+                                        <option value="10">10</option>
+                                        <option value="12">12</option>
+                                        <option value="14">14</option>
+                                        <option value="16">16</option>
+                                        <option value="20">20</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                        <option value="300">300</option>
+                                    </select>
+                                </div>
+                                <div class="items">
+                                    <img src="./img/my-screen/rightClick/at.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img src="./img/my-screen/rightClick/ab.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img src="./img/my-screen/rightClick/jarooo.png" alt="">
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <div class="items">
+                                    <img onclick="boldStyle()" src="./img/my-screen/rightClick/B.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img onclick="orib()"  src="./img/my-screen/rightClick/I.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img onclick="underline()" src="./img/my-screen/rightClick/U.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img src="./img/my-screen/rightClick/light.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img src="./img/my-screen/rightClick/color.png" onclick="showColorPicker()" alt="">
+                                </div>
+                                <div class="items">
+                                    <img src="./img/my-screen/rightClick/list1.png" alt="">
+                                </div>
+                                <div class="items">
+                                    <img src="./img/my-screen/rightClick/list2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <img src="./img/my-screen/rightClick/last.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <main>
+            <div id="personalize" style="display: none;">
+                <div class="close-pers">
+                    <img onclick="closePer()" src="./img/personalize/icons8-close-24 (1).png" alt="">
+                    <img onclick="miniPer()" src="./img/personalize/icons8-square-32.png" alt="">
+                    <img onclick="minusPersonalize()"  src="./img/icon/icons8-minus-24.png" alt="">
+                </div>
+                <div class="left-per">
+                    <div class="hed-items">
+                        <div class="first">
+                            <img src="./img/personalize/icons8-user-96 (1).png" alt="">
+                        </div>
+                        <div class="secondf">
+                            <div class="top">
+                                <h3>Taha</h3>
+                            </div>
+                            <div class="bottom">
+                                <span>Local Account</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-pers">
+                        <input type="text" placeholder="Find a setting">
+                    </div>
+                    <div class="items-per-parent">
+                        <div class="items-per">
+                            <img src="./img/mycomputer-icon/icons8-home-48.png" alt="">
+                            <span>Home</span>
+                        </div>
+                        <div class="items-per">
+                            <img src="./img/mycomputer-icon/icons8-desktop-48.png" alt="">
+                            <span>System</span>
+                        </div>
+                        <div class="items-per">
+                            <img src="./img/personalize/30.01.2024_20.59.47_REC-removebg-preview.png" alt="">
+                            <span>Bluethoos</span>
+                        </div>
+                        <div class="items-per">
+                            <img src="./img/personalize/icons8-wifi-48 (1).png" alt="">
+                            <span>Network & internet</span>
+                        </div>
+                        <div class="items-per" style="background-color : #d8dce1; border-left:4px solid #205a8d">
+                            <img src="./img/personalize/icons8-brush-48.png" alt="">
+                            <span>Personalization</span>
+                        </div>
+                        <div class="items-per">
+                            <img src="./img/personalize/icons8-privacy-48.png" alt="">
+                            <span>Privacy & Security</span>
+                        </div>
+                        <div class="items-per">
+                            <img src="./img/personalize/icons8-account-48.png" alt="">
+                            <span>Account</span>
+                        </div>
+                        <div class="items-per">
+                            <img src="./img/personalize/icons8-earth-globe-48.png" alt="">
+                            <span>Time & Language</span>
+                        </div>
+                        <div class="items-per">
+                            <img src="./img/personalize/icons8-game-controller-48.png" alt="">
+                            <span>Gaming</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-per">
+                    <div class="top">
+                        <div class="items-img" onclick="changeBackground('./img/back4.jpg')">
+                            <input type="radio" name="100" id="n1" checked>
+                            <label for="n1">
+                                <img src="./img/back4.jpg" >
+                            </label>
+                        </div>
+                        <div class="items-img" onclick="changeBackground('./img/Wallpapaer/one.jpg')">
+                            <input type="radio" name="100" id="n2"  >
+                            <label for="n2">
+                                <img src="./img/Wallpapaer/one.jpg" >
+                            </label>
+                        </div>
+                        <div class="items-img" onclick="changeBackground('./img/Wallpapaer/two.jpg')">
+                            <input type="radio" name="100" id="n3"  >
+                            <label for="n3">
+                                <img src="./img/Wallpapaer/two.jpg" >
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="bottom-per">
+                        <div class="items-bt-per">
+                            <div class="img-box">
+                                <img src="./img/personalize/right/icons8-photo-48.png" alt="">
+                            </div>
+                            <div class="text-box">
+                                <div class="top">
+                                    <span>Background</span>
+                                </div>
+                                <div class="bottom">
+                                    <span>Background img, color, slideshadow </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items-bt-per">
+                            <div class="img-box">
+                                <img src="./img/personalize/right/icons8-color-48.png" alt="">
+                            </div>
+                            <div class="text-box">
+                                <div class="top">
+                                    <span>Colors</span>
+                                </div>
+                                <div class="bottom">
+                                    <span>Accent color, transparency effect, color theme </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items-bt-per">
+                            <div class="img-box">
+                                <img src="./img/personalize/right/icons8-brush-50.png" alt="">
+                            </div>
+                            <div class="text-box">
+                                <div class="top">
+                                    <span>Themes</span>
+                                </div>
+                                <div class="bottom">
+                                    <span>Install, create, manage </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items-bt-per">
+                            <div class="img-box">
+                                <img src="./img/personalize/right/icons8-lock-screen-48.png" alt="">
+                            </div>
+                            <div class="text-box">
+                                <div class="top">
+                                    <span>Lock screen</span>
+                                </div>
+                                <div class="bottom">
+                                    <span>Lock screen images, apps, setting</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items-bt-per">
+                            <div class="img-box">
+                                <img src="./img/personalize/right/icons8-keyboard-25.png" alt="">
+                            </div>
+                            <div class="text-box">
+                                <div class="top">
+                                    <span>Text input</span>
+                                </div>
+                                <div class="bottom">
+                                    <span>Touch keyboard, voice typing, emoji and more </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items-bt-per">
+                            <div class="img-box">
+                                <img src="./img/personalize/right/icons8-font-48.png" alt="">
+                            </div>
+                            <div class="text-box">
+                                <div class="top">
+                                    <span>Fonts</span>
+                                </div>
+                                <div class="bottom">
+                                    <span>Install, manage</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items-bt-per">
+                            <div class="img-box">
+                                <img src="./img/personalize/right/icons8-taskbar-50.png" alt="">
+                            </div>
+                            <div class="text-box">
+                                <div class="top">
+                                    <span>Taskbar</span>
+                                </div>
+                                <div class="bottom">
+                                    <span>Taskbar behaviros, system pins </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <main>
+            <div id="recycleBin" class="computerParent" style="display:none;">
+                <div class="hedder" >
+                    <div class="top" >
+                        <div class="child">
+                            <div>
+                                <img src="./img/icon/icons8-recycle-bin-48.png" alt="">
+                                <span>Recycle Bin</span>
+                            </div>
+                        </div>
+                        <div class="click-close" >
+                            <div class="close" onclick="closeRecycleBin()">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                            <div class="resize" onclick="resizeRecycleBin()">
+                                <i class="fa-solid fa-expand"></i>
+                            </div>
+                            <div class="mine" onclick="minusRecycleBin()">
+                                <i class="fa-solid fa-minus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="first">
+                            <i class="fa-solid fa-chevron-left"></i>
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <i class="fa-solid fa-arrow-up"></i>
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </div>
+                        <div class="second">
+                            <input type="text" value="Recycle Bin">
+                        </div>
+                        <div class="third">
+                            <input type="text" placeholder="Search Recycle Bin">
+                        </div>
+                    </div>
+                </div>
+                <div class="footerr">
+                    <div class="left">
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-home-48.png" alt="">
+                        <span>Home</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-gallery-48.png" alt="">
+                        <span>Gallery</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-onedrive-48.png" alt="">
+                        <span>Onedrive</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-desktop-48.png" alt="">
+                        <span>Desktop</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-download-16.png" alt="">
+                        <span>Download</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-document-48.png" alt="">
+                        <span>Document</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-picture-48.png" alt="">
+                        <span>Picture</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-music-48.png" alt="">
+                        <span>Music</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-video-48.png" alt="">
+                        <span>Video</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-folder-48 (1).png" alt="">
+                        <span>img</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-folder-48 (1).png" alt="">
+                        <span>Windows11</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-folder-48 (1).png" alt="">
+                        <span>Digikala</span>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-folder-48 (1).png" alt="">
+                        <span>Modiseh</span>
+                       </div>
+                       <div class="items not-hover">
+                        <ul id="computer-acardion">
+                            <li>
+                                <input type="checkbox" id="second">
+                                <label for="second">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                    <img src="./img/icon/icons8-this-pc-94.png" alt="">
+                                    <span>This pc</span>
+                                </label>
+    
+                                <div class="mini-icon">
+                                    <div class="items">
+                                        <ul class="acordion-second">
+                                            <li>
+                                                <input type="checkbox" id="third">
+                                                <label for="third">
+                                                    <i class="fa-solid fa-chevron-right"></i>
+                                                    <img src="./img/icons8-c-drive-48.png" alt="">
+                                                    <span>Local drive (C:)</span>
+                                                </label>
+    
+                                                <div class="childd">
+                                                    <div class="items">
+                                                        <img src="./img/mycomputer-icon/icons8-folder-48 (1).png" alt="">
+                                                        <span>New folder (1)</span>
+                                                    </div>
+                                                    <div class="items">
+                                                        <img src="./img/mycomputer-icon/icons8-folder-48 (1).png" alt="">
+                                                        <span>New folder (2)</span>
+                                                    </div>
+                                                    <div class="items">
+                                                        <img src="./img/mycomputer-icon/icons8-folder-48 (1).png" alt="">
+                                                        <span>New folder (3)</span>
+                                                    </div>
+                                                    <div class="items">
+                                                        <img src="./img/mycomputer-icon/icons8-folder-48 (1).png" alt="">
+                                                        <span>New folder (4)</span>
+                                                    </div>
+                                                    <div class="items">
+                                                        <img src="./img/mycomputer-icon/icons8-folder-48 (1).png" alt="">
+                                                        <span>New folder (5)</span>
+                                                    </div>
+                                                    <div class="items">
+                                                        <img src="./img/mycomputer-icon/icons8-folder-48 (1).png" alt="">
+                                                        <span>New folder (6)</span>
+                                                    </div>
+    
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="items">
+                                        <img src="./img/icons8-ssd-30.png" alt="">
+                                        <span>Local disk (D:)</span>
+                                    </div>
+                                    <div class="items">
+                                        <img src="./img/icons8-ssd-30.png" alt="">
+                                        <span>Local disk (E:)</span>
+                                    </div>
+                                    <div class="items">
+                                        <img src="./img/icons8-ssd-30.png" alt="">
+                                        <span>Local disk (F:)</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                       </div>
+                       <div class="items">
+                        <img src="./img/mycomputer-icon/icons8-windows-client-48.png" alt="">
+                        <span>Network</span>
+                       </div>
+                    </div>
+                    <div id="itemsRecycle" class="right right-recycle" style="display:none;" onclick="restoreClick()">
+                        <div class="it-recycle">
+                            <div class="left">
+                                <img src="./img/clickright/icons8-folder-48 (1).png" alt="">
+                            </div>
+                            <div class="right">
+                                <span>New Folder</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <main>
+            <div id="restore" style="display:none;">
+                <div class="hedder">
+                    <span>New Folder Properties</span>
+                    <i onclick="closeRestore()" class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="content">
+                    <div class="hed">
+                        <div class="child">
+                            <span>General</span>
+                        </div>
+                    </div>
+                    <div class="main">
+                        <div class="nOne">
+                            <div class="left">
+                                <img src="./img/clickright/icons8-folder-48 (1).png" alt="">
+                            </div>
+                            <div class="right">
+                                <span>New Folder</span>
+                            </div>
+                        </div>
+                        <div class="nTwo">
+                            <div class="items-t">
+                                <span>Type:</span>
+                                <span>File folder</span>
+                            </div>
+                            <div class="items-t">
+                                <span>Orgin:</span>
+                                <span>number1</span>
+                            </div>
+                            <div class="items-t">
+                                <span>Size:</span>
+                                <span>5.86 MB</span>
+                            </div>
+                        </div>
+                        <div class="nThree">
+                            <div class="itThree">
+                                <span>Delete:</span>
+                                <span>Saturday, Janurary 27, 2024, 4:51:47 PM</span>
+                            </div>
+                            <div class="itThree">
+                                <span>Created:</span>
+                                <span>Sunday, January 25, 2024, 3:54:21  PM</span>
+                            </div>
+                        </div>
+                        <div class="nFore">
+                            <button onclick="finalRestore()" type="submit">Restore</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footR">
+                    <button >OK</button>
+                    <button>Cancel</button>
+                    <button disabled>Apply</button>
+                </div>
+            </div>
+        </main>
+        <main>
+            <div id="rightDelete" style="display: none;">
+                <div class="itemsDelete">
+                    <div class="left">
+                        <img src="./img/clickright/icons8-folder-48 (1).png" alt="">
+                    </div>
+                    <div class="right">
+                        <span>Open</span>
+                    </div>
+                </div>
+                <div class="itemsDelete">
+                    <div class="left">
+                        <img src="./img/rightDelete/icons8-pin-48.png" alt="">
+                    </div>
+                    <div class="right">
+                        <span>Pin to Quick access</span>
+                    </div>
+                </div>
+                <div class="itemsDelete">
+                    <div class="left">
+                        <img src="./img/rightDelete/icons8-pin-48.png" alt="">
+                    </div>
+                    <div class="right">
+                        <span>Pin to Start</span>
+                    </div>
+                </div>
+                <div class="itemsDelete">
+                    <div class="left">
+                        <img src="./img/rightDelete/icons8-archive-folder-50.png" alt="">
+                    </div>
+                    <div class="right">
+                        <span>Compress to Zip file</span>
+                    </div>
+                </div>
+                <div class="itemsDelete">
+                    <div class="left">
+                        <img src="./img/rightDelete/icons8-folder-50.png" alt="">
+                    </div>
+                    <div class="right">
+                        <span>Copy as Path</span>
+                    </div>
+                </div>
+                <div class="itemsDelete">
+                    <div class="left">
+                        <img src="./img/rightDelete/icons8-wrench-50.png" alt="">
+                    </div>
+                    <div class="right">
+                        <span>Properties</span>
+                    </div>
+                </div>
+                <div class="footerDelete">
+                    <div class="itemsF">
+                        <img src="./img/rightDelete/icons8-cut-24.png " alt="">
+                    </div>
+                    <div class="itemsF">
+                        <img src="./img/rightDelete/icons8-copy-48.png" alt="">
+                    </div>
+                    <div class="itemsF">
+                        <img src="./img/rightDelete/icons8-rename-48.png" alt="">
+                    </div>
+                    <div class="itemsF" onclick="deleteItemsRecycle()">
+                        <img src="./img/rightDelete/icons8-delete-32.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        <footer>
+            <div class="footer">
+                <div class="items-first" onclick="widgets()">
+                    <img src="./img/icon/nadombe2.png" alt="">
+                </div>
+                <div class="items-second">
+                    <div id="start-icon" onclick="startmenu()" class="items items-child">
+                        <img  src="./img/icon/icons8-windows-11-48.png" alt="">
+                    </div>
+                    <div class="items "></div>
+                    <div class="items">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <div class="items items-child marg">
+                        <img src="./img/icon/icons8-file-explorer-new-48 (1).png" alt="">
+                    </div>
+                    <div class="items items-child marg">
+                        <img src="./img/icon/icons8-chrome-48.png" alt="">
+                    </div>
+                    <div class="items items-child marg">
+                        <img src="./img/icon/icons8-microsoft-edge-48.png" alt="">
+                    </div>
+                    <div class="items items-child marg">
+                        <img src="./img/icon/icons8-microsoft-store-100.png" alt="">
+                    </div>
+                    <div class="items items-child marg">
+                        <img src="./img/icon/icons8-vs-code-48 (1).png" alt="">
+                    </div>
+                    <div id="thisPcFooter" onclick="openFooterThisPc()" class="items items-child marg" style="border-bottom:3px solid #205a8d; background-color: rgba(255, 255, 255, 0.5); display:none;">
+                        <img src="./img/icon/icons8-this-pc-94.png" alt="">
+                    </div>
+                    <div id="recycleBinFooter" onclick="openFooterrecycleBin()" class="items items-child marg" style="border-bottom:3px solid #205a8d; background-color: rgba(255, 255, 255, 0.5); display:none;">
+                        <img id="resycleBinImgFooter" src="./img/icon/icons8-recycle-bin-48 (2).png " alt="">
+                    </div>
+                    <div id="wordFooter" onclick="openFooterWord()" class="items items-child marg" style="border-bottom:3px solid #205a8d; background-color: rgba(255, 255, 255, 0.5); display:none;">
+                        <img src="./img/icon/icons8-word-48 (2).png" alt="">
+                    </div>
+                    <div id="calculatorFooter" onclick="openFootercalculator()" class="items items-child marg" style="border-bottom:3px solid #205a8d; background-color: rgba(255, 255, 255, 0.5); display:none;">
+                        <img src="./img/start/icons8-calculator-53.png" alt="">
+                    </div>
+                    <div id="personalizeFooter" onclick="openFooterPersonalize()" class="items items-child marg" style="border-bottom:3px solid #205a8d; background-color: rgba(255, 255, 255, 0.5); display:none;">
+                        <img src="./img/icon/icons8-setting-48 (1).png" alt="">
+                    </div>
+                    
+                </div>
+                <div class="items-third">
+                    <div class="items">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </div>
+                    <div class="items first">
+                        <span>ENG</span>
+                    </div>
+                    <div class="items">
+    
+                    </div>
+                    <div class="items items-mini marg">
+                        <img src="./img/icon/icons8-wifi-48.png" alt="">
+                    </div>
+                    <div class="items items-mini">
+                        <img src="./img/icon/icons8-sound-50.png" alt="">
+                    </div>
+                    <div class="items items-mini battry">
+                        <img src="./img/icon/icons8-battery-30.png" alt="">
+                    </div>
+                    <div class="items time" onclick="alarmMenu()">
+                      <span>  8:38 pm <br> 11/30/2023</span>
+                    </div>
+                    <div class="items alarm" onclick="alarmMenu()">
+                        <img src="./img/icon/icons8-alarm-24.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
